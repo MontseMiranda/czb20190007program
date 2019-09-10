@@ -1,0 +1,294 @@
+---
+title: "CHAMPIONS LEAGUE MATCH IN BARCELONA"
+author: "METATOUR INTERNATIONAL"
+date: 'November 5th to 7th 2019'
+output:
+ 
+  html_document:
+    css: FORMATO.css
+    highlight: textmate
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+---
+
+<script> 
+    $(document).ready(function() { 
+    $head = $('#header'); 
+    $head.prepend('<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" vspace="50" align="right"></A>') 
+    }); 
+</script> 
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
+```
+
+
+```{r libraries}
+library(readxl)
+library(dplyr)
+library(knitr)
+library(timevis)
+
+```
+
+## Accommodation
+
+### _**Main Hotel: Principal**_
+
+<iframe src="Urban Gran Ducat/Urban Gran Ducat.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+
+### **Alternative Hotels** {.tabset .tabset-fade .tabset-pills}
+
+#### HOTEL 2
+
+<iframe src="Catalonia Sagrada Familia/Catalonia Sagrada Familia.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+
+#### HOTEL 3
+
+<iframe src="Catalonia Atenas/Catalonia Atenas.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+
+#### HOTEL 4
+
+<iframe src="Ayre Caspe/Ayre Caspe.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+
+#### HOTEL 5
+
+<iframe src="Europark/Europark.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+
+
+## Programme
+
+### **Programme Overview and timeline**
+
+```{r timeline overview}
+
+timeline <- read_excel("timeline.xlsx", sheet = "Sheet1", 
+    col_types = c("date", 
+        "text", "text", "numeric", "text", 
+        "text"))
+
+data <- data.frame( id = 1:length(timeline$start),
+                    start = as.POSIXlt(timeline$start),
+                    content = timeline$content,
+                    group = timeline$group,
+                    type = "box",
+                    style = "background-color:#FF9933;")
+
+groups = data.frame(id = 1:4, content = c("Morning", "Lunch", "Afternoon", "Diner"))
+
+tl <- timevis(data, groups, showZoom = TRUE, zoomFactor = 0.2, fit = TRUE, width = '100%', height = 300)
+
+tl %>% setOptions(list(orientation = "top", align = "left"))
+
+```
+
+### **DAY 1, November 5th** 
+
+Cutting Edge Events staff will welcome the group at Barcelona airport and transfer the group to the chosen hotel. 
+
+If it is possible we will do the check in, if not we left the luggage in hotel reception until check in time. Meanwhile, the guide will be in the hotel waiting for the group to start with the **Tapas tour**. 
+
+**TAPAS TOUR**
+
+The tapas tour will start by 12h/13h aproximately, depending on the arrival time of the group (in case you choose Urban Gran Ducal, if not they will go to the city centre by bus).
+This Tapas tour is a walking tour through *Las Ramblas* and *Gothic quarter* of Barcelona, two of the most well-known and nicest spots of Barcelona.
+It is a 3-4 hours tour. They will do 3 stops in 3 different tapas restaurants which are Nuria cafe, Taberna Onofre and Santa Caterina Market. They will taste different spanish flavours in each spot. 
+
+- *Nuria* --> Spanish tapa + 1 drink
+- *Taberna Onofre* --> 2 spanish tapas + 2 drinks
+- *Santa caterina market* --> 2 spanish tapas + 1 dessert + 2 drinks + coffee
+
+
+<img src = "https://www.101viajes.com/sites/default/files/styles/guia-full/public/carrer-bisbe-barrio-gotico-barcelona.jpg?itok=9NnFXAaC&timestamp=1516183256" width="100%">
+
+
+<img src = "https://media-edg.barcelona.cat/wp-content/uploads/2015/05/mercat-santa-caterina-760x428.jpg" width="100%">
+
+Once finished, depending on time, if guests didn't check in we will go to the hotel to check in before going to **Barça stadium**
+The group will go to Barça stadium 2 hours beforehand. As is a Champions league game the stadium is really full. So the bus will leave the hotel at 17:00.
+
+<img src = "https://e00-marca.uecdn.es/imagenes/2015/09/29/futbol/equipos/barcelona/1443555449_extras_noticia_foton_7_1.jpg" width="100%">
+
+After the game, a bus will pick up the group and will go directly to dinner to the restaurant. We offer two different options.
+
+#### Dinner options {.tabset .tabset-fade .tabset-pills}
+
+##### Flamant
+
+<iframe src="Flamant/Flamant.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+ 
+##### Julivert Meu
+
+<iframe src="Julivert Meu/Julivert.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+
+### **DAY 2, November 6th**
+
+During the second day, the group will enjoy of an activity. We suggest three differents activities.
+
+#### Activities options {.tabset .tabset-fade .tabset-pills}
+
+We will suggest two different activities for the second day in Barcelona. If you are in Barcelona you can enjoy the sea from two different points os view. From the sea, overlooking Barcelona's skyline or from the coastline, getting impressed of the enormous sea.
+
+The two suggested activities are:
+
+##### E-Bike tour
+
+We also recommend an E-bike tour from Barcelona city centre to Alella (small town 15km away. It can be to other place indeed), where guests will have a meal overlooking the mountains and the sea.
+Group will start just in front the hotel and then they will ride along Barcelona's promenade and they will have a stop in Badalona beach (middle between) for a drink before arriving to Alella.
+
+A truck will be following the group. If any bike is breaking down they will replace it immediatly. Once the group arrive there, they will load the bikes in the lorry and the bike activity will be finished. 
+
+The winery and vineyards that they will visit is *Bouquet d'Alella* a family and sostenible winery of the area. After the visit they will have a picnic prepared up in the vineyards.
+
+Once they had finished, a bus will be waiting down at the parking to pick up the group and go to Barcelona again.
+
+* **Location** Barcelona - Alella
+* **Duration** 5 hours aprox.   
+* **Capacity** 50 pax 
+* **Included** Bike tour (bikes renting, english speaking guide, bikes transportation), winery visit (wine tasting, picnic, english speaking guide) 
+
+<img src = "https://thewanderingwanderluster.com/wp-content/uploads/DSCN1685_web.jpg" width="100%">
+
+<img src = "https://www.costadebarcelonamaresme.cat/sites/default/files/agenda/19221447_1360401860716603_8692755908284847571_o.jpg" width="100%">
+
+After the activity free time till dinner time
+
+##### Catamaran sailing
+
+Guests will enjoy barcelona skyline while sailing. Catamaran will sail along Barcelona coastline during the morning, so they will relax for some hours skipping all the bad vibes! The boat features sound system, bar, sunbathing areas and bathrooms. 
+The lunch will be served in there, so they will taste Mediterranean barbacue while sailing. Non alcoholic drinks are included, but an option to upgrade to a open bar with beer and sangría is available.    
+
+The activity will start by 10:00 and will be finishing by 13:00, the spot were guests will find the Catamaran is around 15 minutes from the hotel by foot.
+
+* **Location** Barcelona
+* **Duration** 3 hours   
+* **Capacity** 36 pax
+* **Included** Boat renting, staff, BBQ menu, non alcoholic drinks, insurance. 
+
+*Catamaran will be in exclusivity for the group*
+
+<img src = "https://fh-sites.imgix.net/sites/2433/2019/03/22121015/Photo-Orsom-with-twin-towers.jpg?auto=compress%2Cformat&w=700&h=700&fit=max" width="100%">
+
+<img src = "https://fotos.activiclick.com/actividades/o/1523007933-orsom-sailing4.jpg" width="100%">
+
+After the activity free time till dinner time
+
+#### Dinner options {.tabset .tabset-fade .tabset-pills}
+
+##### Casa Carmen
+
+<iframe src="Casa Carmen/CasaCarmen.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+
+##### Fabrica Moritz
+
+<iframe src="Moritz/Moritz.html" frameborder="0" width="100%" height="1100" scrolling="no"></iframe>
+
+### **DAY 3, November 7th** 
+
+November the 7th will be the last day in Barcelona. If the group departure is at the afternoon they will have time enough to enjoy one last activity in Barcelona. That's teh reason we offer two more activities.
+
+#### Activities options{.tabset .tabset-fade .tabset-pills}
+
+##### Segway 
+
+Guests will be invited to enjoy a new and funny way to visit the city sea front promenade and the Barceloneta quarter. The tour will start just 10 minutes walking from the lunch restaurant and it will finish at Arc del Triomf. 
+
+Segway tour is an activity that combines the adrenaline by driving yourselve and the intrigue by discovering the most hidden spots in Barcelona's promenade. This activity takes about 2 hours 
+
+* **Location** Barcelona
+* **Duration** 2 hours   
+* **Capacity** 50 pax 
+* **Included** Segway renting, english speaking guide.
+
+<img src = "https://cdn02.visitbarcelona.com/files/5531-4508-imagenCAT/BarcelonaSegway-T24-g.jpg" width="100%">
+
+<img src = "http://enbarcelona.com/public/images_web/enbarcelona/83dcff6183200122031973dcf3d82f28.jpg" width="100%">
+
+##### Go Cars
+
+hey will walk from the hotel (or from Racó de la Vila) around 20 minutes to arrive to the GoCars shop. 
+
+Discover Barcelona in a different way by driving special cars around the city. Go Cars is an activity destinated to those who likes non-common city tours. Guests will explore Barcelona by the road. Is a sightseeing tour but completely different to a common one. If guests want to drive, they must have a driving licence.
+The duration of the activity is about 2 hours.
+
+* **Location** Barcelona
+* **Duration** 2 hours   
+* **Capacity** 2 pax per car 
+* **Included** Car renting, english speaking guide, insurances.
+
+The route of the activity is this:
+
+<img src = "rutacars.jpg" width="100%">
+
+<br>
+
+<img src = "https://barcelona-home.com/blog/wp-content/upload/2014/05/go-car-955x488.png" width="100%">
+
+<img src = "https://barcelona-home.com/blog/wp-content/upload/2014/05/go-car-1.jpg" width="100%">
+
+The tour starts and ends at the same spot: the GoCars Shop just next to Arc del Triomf. 
+From this spot guests can take a walk to visit the Born Quarter, full of narrow streets with beautiful squares and bars to have a drink in every corner.
+
+END OF THE PROGRAMME
+
+*****
+
+## Budget
+
+<iframe src="https://czb20190007costing.netlify.com"  frameborder="0" width="100%" height="1600" scrolling="no"></iframe>
+
+<br>
+
+## Terms & Conditions
+
+  * Rates valid for 2019.
+  
+  * Net rates for Metatour International
+  
+  * For a group of minimum 20 pax.
+  
+  * Cutting Edge Events management fee including in the detailed rates
+  
+  * VAT included. 
+  
+  * No reservation has been done. Availability upon request.
+  
+*****
+
+## Amaze your clients!!
+
+<div class="client_offer">
+
+<p>Didn't you just love our presentation ? Our first goal here at _**Cutting Edge Events**_ is to help you **win** this business. You will most likely now collate the information contained in this website and make your own presentation
+to show your client<br>
+
+<p>Why not leverage our technology, and present your client with the same format ? As a **totally free service**, we offer you the possibility of doing the work for you</p>
+
+<p> We will: 
+  <ul>
+    * Follow your instructions to add anything you want to be in your presentation, and delete anything that you don't consider relevant
+    * Include your logo and company details, and remove all our company details
+    * We can even change some colours to mimic your corporate identity 
+    * We will send you the new link, and it will look as if it was your work
+  </ul>
+</p>
+</div>
+
+<style>
+
+.client_offer{
+background-color: blue;
+color: white;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+</style>
+
+******************
+
